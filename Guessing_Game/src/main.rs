@@ -22,14 +22,14 @@ fn main() {
 
 }
 
-fn get_intpu(text: String) -> i32{
+fn get_intpu(text: String) -> String{
     print!("{}", text);
     io::stdout().flush().unwrap();
     let mut inp = String::new();
     io::stdin()
         .read_line(&mut inp)
         .expect("Failed to read line");
-    inp.trim().parse::<i32>().unwrap()
+    inp.trim().to_string()
 }
 
 mod tests {
